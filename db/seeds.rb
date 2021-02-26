@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+if not Rails.env.production?
+  require Rails.root.join('db/seeds/users/sample_users.rb')
+  puts "Processing sample_users.rb"
+end
