@@ -3,9 +3,13 @@ class OauthController < ApplicationController
   def index
   end
 
-  redirect as to not expose application key
+  # redirect to unifa API
   def request_authorization_redirect
-    redirect_to client_options.authorization_uri
+    # using an Oauth gem may simplify this
+    parameters = {response_type: "code", client_id: client_options[:client_id], redirect_uri: client_options[:redirect_uri], state: nil, scope: nil}
+    uri = URI(client_options[:authorization_uri])
+    uri.query = parameters.to_query
+    redirect_to uri.to_s
   end
 
   # set api authorization in session
@@ -16,11 +20,10 @@ class OauthController < ApplicationController
 
   def client_options
     {
-      client_id: Rails.application.credintials.unifa_client_id,
-      client_secret: Rails.application.credintials.unifa_client_secret,
+      client_id: Rails.application.credentials.unifa_client_id,
+      client_secret: Rails.application.credentials.unifa_client_secret,
       authorization_uri: 'https://arcane-ravine-29792.herokuapp.com/oauth/authorize',
-      # redirect_uri: "http://localhost:3000/oauth/callback"
+      redirect_uri: "http://localhost:3000/oauth/callback" # API server will not dynamically reassign
     }
   end
-
 end
