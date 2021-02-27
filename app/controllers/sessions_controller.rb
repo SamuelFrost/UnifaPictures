@@ -1,7 +1,9 @@
 class SessionsController < ApplicationController
+  skip_before_action :logged_in_only_page
   def new
   end
 
+  # login
   def create
     user = User.find_by(username: params[:session][:username])
     if user && user.authenticate(params[:session][:password])
@@ -15,6 +17,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  # logout
   def destroy
     session.delete(:user_id)
     @current_user = nil

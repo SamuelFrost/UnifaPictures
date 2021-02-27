@@ -12,4 +12,8 @@ module SessionsHelper
     !current_user.new_record?
   end
 
+  def logged_in_only_page
+    redirect_to root_path unless logged_in?
+  end
+
 end
