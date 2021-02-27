@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:session][:username])
     if user && user.authenticate(params[:session][:password])
       log_in(user)
+      redirect_to pictures_path
     else
       @login_errors = ['ユーザーIDとパスワードが一致するユーザーが存在しない']
       # use a new user object to check validations from model

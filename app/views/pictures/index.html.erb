@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pictures</h1>
+
+<%= link_to 'New Picture', new_picture_path %>
+
+<br>
+
+<div class="picture-index-container">
+<% @pictures.each do |picture| %>
+  <div class="picture-index-card">
+    <div>
+    <div><%= picture.title %></div>
+      <%= link_to edit_picture_path(picture) do %>
+        <img class="picture-index-image" src=<%= url_for(picture.picture_file) %>>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<br>
