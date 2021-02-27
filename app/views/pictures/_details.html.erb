@@ -1,0 +1,12 @@
+<div class="picture-index-card">
+  <div class="picture-card">
+    <div>
+      <div>
+        <%= picture.title %>
+      </div>
+      <%= link_to edit_picture_path(@picture) do %>
+        <img class="picture-index-image" src=<%= url_for(picture.picture_file) %>>
+      <% end %>
+    </div>
+  </div>
+</div>

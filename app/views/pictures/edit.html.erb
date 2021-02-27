@@ -1,6 +1,6 @@
 <h1>Editing Picture</h1>
 
 <%= render 'form', picture: @picture %>
-
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+<%= render 'details', picture: @picture %> |
+<%= link_to "削除", picture_path(@picture.id), method: :delete %>
+<%= link_to 'キャンセル', pictures_path %>

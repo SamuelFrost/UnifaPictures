@@ -30,11 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Confirm changes to %{model}"
   activerecord:
     attributes:
       user:
         password: "Password"
         username: "Username"
+      picture:
+        title: "Title"
+        picture_file: "Picture File"
     errors:
       models:
         user:
@@ -42,4 +49,10 @@ en:
             password:
               blank: "You must enter a password."
             username:
-              blank: "You mus enter a username."
+              blank: "You must enter a username."
+        picture:
+          attributes:
+            title:
+              blank: "You must enter a title."
+            picture_file:
+              blank: "You must attach a picture."

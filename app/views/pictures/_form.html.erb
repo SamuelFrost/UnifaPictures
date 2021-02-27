@@ -1,8 +1,7 @@
 <%= form_with(model: picture) do |form| %>
   <% if picture.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
-
+      <h2>下記のエラーのよりセーブが失敗しました:</h2>
       <ul>
         <% picture.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -22,6 +21,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "アップロード" %>
   </div>
 <% end %>

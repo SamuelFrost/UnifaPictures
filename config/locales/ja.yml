@@ -30,11 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 ja:
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Confirm changes to %{model}"
   activerecord:
     attributes:
       user:
         password: "パスワード"
         username: "ユーザーID"
+      picture:
+        title: "タイトル"
+        picture_file: "画像のファイル"
     errors:
       models:
         user:
@@ -43,3 +50,9 @@ ja:
               blank: "パスワードが未入力."
             username:
               blank: "ユーザー名が未入力"
+        picture:
+          attributes:
+            title:
+              blank: "：タイトルが未入力"
+            picture_file:
+              blank: "：画像のファイル添付されていません"
