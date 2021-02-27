@@ -10,9 +10,12 @@ class SessionsController < ApplicationController
       log_in(user)
     else
       @login_errors = ['ユーザーIDとパスワードが一致するユーザーが存在しない']
+      # use a new user object to check validations from model
       user = User.new({username: params[:session][:username], password: params[:session][:password]})
-      user.valid?
-      @login_errors.concat(user.errors.map{|error|error.message})
+      user.valid?(:login)
+      #filter to only messages about blank fields to prevent exposing unwanted data (:login context already does this as is, but just incase there's changes later)
+      validation_errors = user.errors.filter{|error| error.type == :blank}
+      @login_errors.concat(validation_errors.map{|error|error.message})
       render 'new'
     end
   end
