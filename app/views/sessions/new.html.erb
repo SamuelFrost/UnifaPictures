@@ -1,2 +1,12 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1> ログイン <h1>
+  <% @login_errors&.each do |value| %>
+    <div class="login-error"><%= value %></div>
+  <% end %>
+
+<%= form_for :session, url: sessions_path do |f|%>
+  <%= f.label :username, t('activerecord.attributes.user.username') %> <br>
+  <%= f.text_field :username %><br>
+  <%= f.label :password, t('activerecord.attributes.user.password') %><br>
+  <%= f.password_field :password %><br>
+  <%= f.submit "ログイン" %>
+<% end %>

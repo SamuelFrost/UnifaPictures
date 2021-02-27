@@ -1,0 +1,47 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  height:100vh;
+  width:100vw;
+}
+.site-grid{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.site-grid-header{
+  grid-area: header;
+  display: flow-root;
+}
+
+.site-grid-body{
+  grid-area: main;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.site-grid-footer{
+  grid-area: footer;
+}
+
+main{
+  padding: 20px;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+}
+
+.logout-link {
+  font-size: 40px;
+}

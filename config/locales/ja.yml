@@ -29,17 +29,17 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+ja:
   activerecord:
     attributes:
       user:
-        password: "Password"
-        username: "Username"
+        password: "パスワード"
+        username: "ユーザーID"
     errors:
       models:
         user:
           attributes:
             password:
-              blank: "You must enter a password."
+              blank: "パスワードが未入力."
             username:
-              blank: "You mus enter a username."
+              blank: "ユーザー名が未入力"

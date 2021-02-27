@@ -11,6 +11,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="site-grid">
+      <div class="site-grid-header">
+        <% if logged_in? %>
+          <div class="logout-link">
+            <%= link_to "ログアウト", :sessions, method: :delete %>
+          </div>
+        <% end %>
+      </div>
+      <div class="site-grid-body">
+        <main>
+          <%= yield %>
+        </main>
+      </div>
+      <div class="site-grid-footer"></div>
+    </div>
   </body>
 </html>
