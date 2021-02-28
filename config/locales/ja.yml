@@ -54,5 +54,6 @@ ja:
           attributes:
             title:
               blank: "：タイトルが未入力"
+              too_long: "：タイトルがながすぎます"
             picture_file:
               blank: "：画像のファイル添付されていません"

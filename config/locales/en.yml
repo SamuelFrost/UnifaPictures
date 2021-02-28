@@ -54,5 +54,6 @@ en:
           attributes:
             title:
               blank: "You must enter a title."
+              too_long: "You must enter a shorter title."
             picture_file:
               blank: "You must attach a picture."
