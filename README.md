@@ -1,3 +1,8 @@
+# Overview
+This is a project that a company requested I make as part of an interview process. I made it from scratch according to the design documents given to me (in Japanese).
+
+It highlights an picture uploading application that communicates with a third party twitter clone API to share uploaded images from the app servers.
+
 # Get started with a development environment:
 #### * you will need to contact unifa for an access key if you wish to utilize the api connected in this application
 Ensure your ruby version is up to date with your preferred method
