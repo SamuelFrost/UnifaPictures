@@ -39,6 +39,22 @@ For incremental migrations
 rails db:migrate
 rails db:seed
 ```
+### Credentials
+For unifa employees, I will share the master.key file, so you can simply copy the file into the config directory. And rails will be able to decode the encoded credentials.yml.enc file.
+
+Contact Unifa for API credentials *I am not affiliated with Unifa directly, so I don't have any say in them giving you an account.
+
+If the master.key file is not available, you may edit the credentials and paste the appropriate secret keys in.
+```
+EDITOR=vi bin/rails credentials:edit
+```
+replace the appropriate codes for the following keys
+```
+unifa_client_id: client_id_code
+unifa_client_secret: client_secret_code
+```
+If you do this, note that you should not commit the credentials if you want to contribute.
+
 ### Running development environment:
 Start up rails and access it via a browser at the displayed url, which should default to something like http://127.0.0.1:3000
 ```
