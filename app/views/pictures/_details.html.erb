@@ -9,7 +9,7 @@
   </div>
   <% if session[:unifa_twitter_token_code] %>
     <div class="picture-card-footer">
-      <%= button_to 'ツイートする', picture_path(picture)%>
+      <%= button_to 'ツイートする', pictures_unifa_tweet_path, params: {id: picture.id}, remote: true, data: {disable_with: "送信中"} %>
     </div>
   <% end %>
 </div>

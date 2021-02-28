@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :pictures
+  post "pictures/unifa_tweet" => "pictures/unifa_tweet"
+
   resources :sessions, only: [:new, :create]
   get "sessions/" => "sessions#new"
   delete "sessions/" => "sessions#destroy"
