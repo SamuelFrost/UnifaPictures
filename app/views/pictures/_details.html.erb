@@ -1,12 +1,15 @@
-<div class="picture-index-card">
-  <div class="picture-card">
-    <div>
-      <div>
-        <%= picture.title %>
-      </div>
-      <%= link_to edit_picture_path(@picture) do %>
-        <img class="picture-index-image" src=<%= url_for(picture.picture_file) %>>
-      <% end %>
-    </div>
+<div class="picture-card">
+  <div class="picture-card-title">
+    <%= picture.title %>
   </div>
+  <div class="picture-card-body">
+    <%= link_to edit_picture_path(picture) do %>
+      <img class="picture-card-image" src=<%= url_for(picture.picture_file) %>>
+    <% end %>
+  </div>
+  <% if session[:unifa_twitter_token_code] %>
+    <div class="picture-card-footer">
+      <%= button_to 'ツイートする', picture_path(picture)%>
+    </div>
+  <% end %>
 </div>

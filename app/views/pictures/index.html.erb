@@ -7,15 +7,8 @@
 
 <br>
 
-<div class="picture-index-container">
+<div class="picture-container">
 <% @pictures.each do |picture| %>
-  <div class="picture-index-card">
-    <div>
-    <div><%= picture.title %></div>
-      <%= link_to edit_picture_path(picture) do %>
-        <img class="picture-index-image" src=<%= url_for(picture.picture_file) %>>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'details', picture: picture %>
 <% end %>
 </div>
