@@ -30,8 +30,9 @@
 }
 .picture-card-image {
   object-fit: cover;
-  width: clamp(15ch, 100%, 100%);
-  height: clamp(20rem, 30vh, 100vh);
+  width: 100%;
+  height: 30vh;
+  min-height: 20rem;
 }
 .picture-card-footer {
   grid-area: footer;
