@@ -15,8 +15,7 @@ end
 
 module SignInHelper
   def sign_in_as_test
-    # puts BCrypt::Password.new(user.password_digest)
-    post sessions_path('session' => {"username" => "Test", "password" => "BecausemynameisSam"}, "commit"=>"ログイン")
+    post sessions_path('session' => {"username" => "Test", "password" => "Test"}, "commit"=>"ログイン")
   end
 end
 module SignOutHelper

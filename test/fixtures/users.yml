@@ -1,11 +1,12 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   username: Test
-  password_digest: $2a$12$WPjk91vh8QJt5q3OHTBl4uMUO6qgkQnk9GbW7qqCReCVi2xxlKD1m
-  # password_digest: BecausemynameisSam
+  password_digest: $2a$12$BrUzRmimrMlg1btXjBk0G.h4tRs2tS.mpaSywn3u9lDjDH5x3dGqO
+  # password: Test
 
 two:
   username: aaa
   password_digest: $2a$12$CytWvTZgN4Xm.5KDIYBfM.54MKCioFrjs6Ycb4Leh1yOuqd08EVoa
-  # password_digest: aaa
+  # password: aaa
