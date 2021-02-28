@@ -24,6 +24,8 @@ class SessionsController < ApplicationController
   # logout
   def destroy
     session.delete(:user_id)
+    session.delete(:unifa_twitter_token_code)
+    session.delete(:authorization_response_uri)
     @current_user = nil
     redirect_to root_path
   end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :oauth, only: [:index]
   get "oauth/request_authorization_redirect" => "oauth#request_authorization_redirect"
+  get "oauth/callback" => "oauth#callback"
 
 
   root to: 'sessions#new'
