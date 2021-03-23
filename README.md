@@ -1,5 +1,5 @@
 # Overview
-This is a project that a company requested I make as part of an interview process. I made it from scratch according to the design documents given to me (in Japanese).
+This is a project that a company requested I make as part of an interview process. I made it from scratch according to the design documents given to me (in Japanese). See Task Specifications pdf for details.
 
 It highlights an picture uploading application that communicates with a third party twitter clone API to share uploaded images from the app servers.
 
